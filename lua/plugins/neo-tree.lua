@@ -7,6 +7,10 @@ return {
 		{ "<leader>e", "<cmd>Neotree reveal<cr>", desc = "Focus File Explorer" },
 		{ "<leader>te", "<cmd>Neotree toggle<cr>", desc = "Toggle File Explorer" },
 	},
+  dependencies = {
+    { "MunifTanjim/nui.nvim" },
+    { "nvim-tree/nvim-web-devicons" },
+  },
 	init = function()
 		vim.g.neo_tree_remove_legacy_commands = true
 	end,
@@ -120,7 +124,9 @@ return {
       },
     },
     filesystem = {
-      follow_current_file = true,
+      follow_current_file = {
+        enabled = true
+      },
       hijack_netrw_behavior = "open_current",
       use_libuv_file_watcher = true,
     },

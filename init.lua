@@ -1,4 +1,5 @@
 require "options"
 require "bootstrap"
+require "blade"
+require "neovide"
 require "keymaps"
-require "autocmds"

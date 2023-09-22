@@ -27,10 +27,10 @@ return {
 				pattern = { "help", "alpha", "dashboard", "neo-tree", "Trouble", "lazy", "mason" },
 				callback = function()
 					vim.b.miniindentscope_disable = true
-				end,
+				end
 			})
 			require("mini.indentscope").setup(opts)
-			vim.api.nvim_set_hl(0, 'MiniIndentScopeSymbol', { fg = "#8ea4a2" })
+			vim.api.nvim_set_hl(0, 'MiniIndentScopeSymbol', { fg = "#ea9d34" })
 		end,
 	},
 	{

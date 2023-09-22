@@ -29,6 +29,8 @@ set("x", "<leader>p", '"_dP', { desc = "Paste from clipboard" })
 set("n", "|", "<cmd>vsplit<cr>", { desc = "Vertical Split" })
 set("n", "\\", "<cmd>split<cr>", { desc = "Horizontal Split" })
 
+set("n", "<leader>tt", "<cmd>ToggleTerm direction=float<cr>", { desc = "Open Terminal" })
+
 set("n", "<leader>w", "<cmd>w<cr>", { desc = "Save" })
 set("n", "<leader>q", "<cmd>confirm q<cr>", { desc = "Quit" })
 
@@ -36,19 +38,3 @@ set("n", "L", "<cmd>bnext<cr>", { desc = "Next buffer" })
 set("n", "H", "<cmd>bprev<cr>", { desc = "Previous buffer" })
 
 set("n", "<leader>gg", "<cmd>GoBlade<cr>", { desc = "Laravel Go To" })
-
-set("n", "zR", function()
-	require("ufo").openAllFolds()
-end, { desc = "Open all folds" })
-set("n", "zM", function()
-	require("ufo").closeAllFolds()
-end, { desc = "Close all folds" })
-set("n", "zr", function()
-	require("ufo").openFoldsExceptKinds()
-end, { desc = "Fold less" })
-set("n", "zm", function()
-	require("ufo").closeFoldsWith()
-end, { desc = "Fold more" })
-set("n", "zp", function()
-	require("ufo").peekFoldedLinesUnderCursor()
-end, { desc = "Peek fold" })
